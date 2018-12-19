@@ -42,22 +42,3 @@ function getElementValue ( id )
 	return "";
 }
 
-// Set the value of the specified element.
-
-function setElementValue( id, value )
-{
-    var elt = myGetElement(id);
-    
-    if ( elt && elt.type && elt.type == "checkbox" )
-    {
-	if ( value ) elt.checked = 1;
-	else elt.checked = 0;
-    }
-
-    else if ( elt )
-    {
-	elt.value = value;
-    }
-}
-
-

@@ -48,4 +48,39 @@ function makeOptionList ( options )
     return content;
 }
 
+// Set the value of the specified element.
+
+function setElementValue( id, value )
+{
+    var elt = myGetElement(id);
+    
+    if ( elt && elt.type && elt.type == "checkbox" )
+    {
+	if ( value ) elt.checked = 1;
+	else elt.checked = 0;
+    }
+
+    else if ( elt )
+    {
+	elt.value = value;
+    }
+}
+
+// Set the textContent of the specified element.
+
+function setElementContent( id, value )
+{
+    var elt = myGetElement(id);
+
+    if ( elt ) elt.textContent = value;
+}
+
+// Set or clear the 'disabled' property of the specified element.
+
+function setElementDisabled( id, value )
+{
+    var elt = myGetElement(id);
+
+    if ( elt ) elt.disabled = value;
+}
 
